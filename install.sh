@@ -29,11 +29,6 @@ echo "listen_addresses='*'" >> /etc/postgresql/9.1/main/postgresql.conf
 echo "CREATE USER ong WITH PASSWORD 'b4s3dg0d';" | sudo -u postgres psql
 echo "CREATE DATABASE ong;" | sudo -u postgres psql
 echo "GRANT ALL PRIVILEGES ON DATABASE ong TO ong;" | sudo -u postgres psql
-sudo -u ong psql -f $OSIAM_DIST_DIR/osiam-server/osiam-auth-server/sql/drop_all.sql -U ong
-sudo -u ong psql -f $OSIAM_DIST_DIR/osiam-server/osiam-auth-server/sql/init_ddl.sql -U ong
-sudo -u ong psql -f $OSIAM_DIST_DIR/osiam-server/osiam-resource-server/sql/drop_all.sql -U ong
-sudo -u ong psql -f $OSIAM_DIST_DIR/osiam-server/osiam-resource-server/sql/init_ddl.sql -U ong
-sudo -u ong psql -f $OSIAM_DIST_DIR/osiam-server/osiam-resource-server/sql/init_data.sql -U ong
 sudo -u ong psql -f $OSIAM_DIST_DIR/addon-self-administration/sql/init_data.sql -U ong
 # import setup data
 sudo -u ong psql -f $INSTALLER_DIR/setup_data.sql -U ong

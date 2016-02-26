@@ -87,6 +87,20 @@ Show message with ID 1
 
     RETR 1
 
+## Use with docker-machine
+
+This container will only work with docker-machine (or boot2docker) when
+forwarding the port of the tomcat that is running inside the docker container.
+This solution is actually usable for any other set-up where the container is
+not running on the host system directly. The trick is to forward the tomcat
+port via ssh tunnel to the host
+
+    $ docker-machine ssh default -L 8080:localhost:8080
+
+This example assumes that there is a docker machine called `default`. If you
+want to use this with a VM, just use the ssh command and change `default` to
+the remote host/ip.
+
 ## Stuff that does not work (TODOs)
 
 * setting db password and other security stuff on run

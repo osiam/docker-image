@@ -38,6 +38,17 @@ access OSIAM with
 See [Next Steps](https://github.com/osiam/osiam/blob/v2.4/docs/detailed-reference-installation.md#next-steps)
 chapter in official docs how to use OSIAM.
 
+### Accessing the Logs
+
+You can find the log files in the container file system:
+
+```
+/var/log/supervisor/tomcat8-stderr---supervisor-EQxqwo.log
+/var/log/supervisor/tomcat8-stdout---supervisor-Vcz9Yi.log
+```
+
+The cryptic suffix is, of course, a random string, so the files have other names in your container.
+
 ### Debug
 
 You can also start Tomcat in debugging mode.

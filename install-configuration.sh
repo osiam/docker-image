@@ -2,8 +2,11 @@
 
 set -e
 
-mkdir /var/lib/osiam
-chown tomcat8:tomcat8 /var/lib/osiam
+export OSIAM_HOME=/var/lib/osiam
+mkdir ${OSIAM_HOME}
+java -jar osiam/target/osiam.war initHome
+mv osiam.yaml ${OSIAM_HOME}/config/osiam.yaml
+chown -R tomcat8:tomcat8 ${OSIAM_HOME}
 
 mkdir /etc/osiam
 

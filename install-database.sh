@@ -26,6 +26,7 @@ flyway -locations=db/migration/postgresql/ \
     migrate
 
 # import addon setup data
+sudo -u osiam psql -f example-data.sql
 sudo -u osiam psql -f addon-self-administration/src/main/sql/client.sql
 sudo -u osiam psql -f addon-self-administration/src/main/sql/extension.sql
 sudo -u osiam psql -f addon-administration/src/main/sql/client.sql

@@ -17,7 +17,7 @@ unzip greenmail.war -d /var/lib/tomcat7/webapps/greenmail
 sed -i 's/127.0.0.1/0.0.0.0/g' /var/lib/tomcat7/webapps/greenmail/WEB-INF/web.xml
 
 # install maven
-MAVEN_VERSION=3.3.3
+MAVEN_VERSION=3.3.9
 curl -o apache-maven.tgz ftp://ftp.fu-berlin.de/unix/www/apache/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 tar -xzf apache-maven.tgz
 mv apache-maven-${MAVEN_VERSION} /opt/apache-maven

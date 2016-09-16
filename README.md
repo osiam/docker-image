@@ -18,11 +18,11 @@ only! Do not even think about using it in a production-like environment!
 
 Run with:
 
-    $ docker run -i -t -p 8080:8080 -p 5432:5432 -p 10110:10110 osiamorg/osiam:2.5
+    $ docker run -i -t -p 8080:8080 -p 5432:5432 -p 10110:10110 osiamorg/osiam:3.0
 
 or in daemon mode with:
 
-    $ docker run -d -p 8080:8080 -p 5432:5432 -p 10110:10110 osiamorg/osiam:2.5
+    $ docker run -d -p 8080:8080 -p 5432:5432 -p 10110:10110 osiamorg/osiam:3.0
 
 This will bind ports 8080 (tomcat), 5432 (postgres) and 10110 (greenmail) on
 the docker host.
@@ -35,8 +35,8 @@ access OSIAM with
 
     admin:koala
 
-See [Next Steps](https://github.com/osiam/osiam/blob/v2.4/docs/detailed-reference-installation.md#next-steps)
-chapter in official docs how to use OSIAM.
+See [the documentation](https://github.com/osiam/osiam/blob/3.0/docs/detailed-reference-installation.md#customize-setup)
+on what to do next.
 
 ### Accessing the Logs
 

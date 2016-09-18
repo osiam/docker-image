@@ -2,15 +2,6 @@
 
 set -e
 
-# install flyway
-FLYWAY_VERSION=3.2.1
-curl -o flyway.tgz http://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/${FLYWAY_VERSION}/flyway-commandline-${FLYWAY_VERSION}.tar.gz
-tar -xzf flyway.tgz
-mv flyway-${FLYWAY_VERSION} /opt/flyway
-mv -f flyway.conf /opt/flyway/conf/flyway.conf
-chmod +x /opt/flyway/flyway
-ln -s /opt/flyway/flyway /usr/local/bin/flyway
-
 # install greenmail webapp to provide simple smtp service for the self-administration and administration
 curl -o greenmail.war http://central.maven.org/maven2/com/icegreen/greenmail-webapp/1.4.1/greenmail-webapp-1.4.1.war
 unzip greenmail.war -d /var/lib/tomcat8/webapps/greenmail

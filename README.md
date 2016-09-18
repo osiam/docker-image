@@ -11,7 +11,7 @@ only! Do not even think about using it in a production-like environment!
 * full postgres database already installed
 * default sample data included
 * running greenmail fake mail server to provide fully functional addons
-* a few dev tools are included for convenience: maven, flyway, git, less, vim,
+* a few dev tools are included for convenience: maven, git, less, vim,
   openjdk7-jdk, curl, unzip
 
 ## Use the image

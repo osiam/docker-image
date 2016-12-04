@@ -4,7 +4,7 @@ set -e
 
 export OSIAM_HOME=/var/lib/osiam
 mkdir ${OSIAM_HOME}
-java -jar osiam/target/osiam.war initHome
+java -jar osiam/build/libs/osiam.war initHome
 mv osiam.yaml ${OSIAM_HOME}/config/osiam.yaml
 chown -R tomcat8:tomcat8 ${OSIAM_HOME}
 

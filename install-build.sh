@@ -7,7 +7,7 @@ set -e
 git clone ${OSIAM_REPO} osiam
 pushd osiam
 git checkout ${OSIAM_REF}
-mvn package -DskipTests
+./gradlew assemble
 popd
 
 git clone ${OSIAM_ADDON_SELF_ADMINISTRATION_REPO} addon-self-administration

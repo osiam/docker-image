@@ -19,7 +19,7 @@ echo "CREATE USER osiam WITH PASSWORD 'osiam';" | sudo -u postgres psql
 echo "CREATE DATABASE osiam;" | sudo -u postgres psql
 echo "GRANT ALL PRIVILEGES ON DATABASE osiam TO osiam;" | sudo -u postgres psql
 
-java -jar osiam/target/osiam.war migrateDb --osiam.home=/var/lib/osiam
+java -jar osiam/build/libs/osiam.war migrateDb --osiam.home=/var/lib/osiam
 
 # import addon setup data
 sudo -u osiam psql -f example-data.sql
